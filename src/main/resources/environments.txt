@@ -1,0 +1,10 @@
+dta/team4/cluster2/ycs
+dta/team5/cluster2/ycs
+dta/team6/cluster2/ycs
+dta/team9/cluster2/ycs
+dta/team11/cluster2/ycs
+dta/team12/cluster2/ycs
+dta/yfb-acc/cluster2/ycs
+prd/yfb-ext-prd/cluster2/ycs
+prd/yfb-prd/cluster2/ycs
+prd/yfb-sandbox/cluster2/ycs

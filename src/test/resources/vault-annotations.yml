@@ -1,0 +1,30 @@
+vault.hashicorp.com/agent-inject-secret-orian-token: ""
+vault.hashicorp.com/agent-inject-secret-payvision-password: ""
+vault.hashicorp.com/agent-inject-secret-pps-master-account: ""
+vault.hashicorp.com/agent-inject-secret-pps-password: ""
+vault.hashicorp.com/agent-inject-secret-pps-shared-secret: ""
+vault.hashicorp.com/agent-inject-template-orian-token: |
+  {{- with secret "transit/git/decrypt/team10-default-banking" "ciphertext=vault:v1:YFy1OFWpgQ27kdDuCIJAVVZf7EigcDeqg/oGhgRsrvCS5P9M/a6p+EyH5HFc/w==" "context=eW9sdC1naXQtc3RvcmFnZQo=" -}}
+  type: PASSWORD_ALFA_NUMERIC
+  {{ .Data.plaintext }}
+  {{- end -}}
+vault.hashicorp.com/agent-inject-template-payvision-password: |
+  {{- with secret "transit/git/decrypt/team10-default-banking" "ciphertext=vault:v1:kiIL43990dBY3jCNoUn4aGRiBoiQTzqw51JavuavfH50ZD/7aDN+qg==" "context=eW9sdC1naXQtc3RvcmFnZQo=" -}}
+  type: PASSWORD_ALFA_NUMERIC_SPECIAL_CHARS
+  {{ .Data.plaintext }}
+  {{- end -}}
+vault.hashicorp.com/agent-inject-template-pps-master-account: |
+  {{- with secret "transit/git/decrypt/team10-default-banking" "ciphertext=vault:v1:OxoAs/DYmF1wIGmJLrsrjOd+RzlRlMiLYvWekNeeohydzLVLfHR4Ls5u4TcCTiS4v8gEQE5pdYsIpmKw5vjX+UgP2AjoBlkuGCH4Asw0XVo9UDuNFvoyJ3W4Z/x0MyqCaHlZ9E31fbmnlfToJvhxMRT8qte3EGSgx7GzKeJL0aLKldyaJTYpVfCWxlTbxj0MKPP1cCpe3YMfeqQyy3YCfdyY+RTX4QC8xlRG9gnj5dX0qYjoF2yVwh8k7+Gh5jFK5VIffa75ojhkWgdekZWDdF6hW25bCho2BGq4iR7dzHBWxmg4f/EG3fEDEJ6bin1Ahm0r3zv1EypqAJpTvG58rQEXs8xPQ/mUsKo5mQ5yEndt8C1xiI+e6LSHcgi13prEPi6Ta02/M5uUhr0K4s8Fp8pRQ2GMwxAG7Lds9Nn5YDBIFEIOMeP8RXuCZ8RTGkyRibRVmxRhYDD3iKYQ" "context=eW9sdC1naXQtc3RvcmFnZQo=" -}}
+  type: PASSWORD_ALFA_NUMERIC_SPECIAL_CHARS
+  {{ .Data.plaintext }}
+  {{- end -}}
+vault.hashicorp.com/agent-inject-template-pps-password: |
+  {{- with secret "transit/git/decrypt/team10-default-banking" "ciphertext=vault:v1:3hOjimqLiiNshoEAywlm3l/PM3lkKQTUwceci54mBR0=" "context=eW9sdC1naXQtc3RvcmFnZQo=" -}}
+  type: PASSWORD_ALFA_NUMERIC_SPECIAL_CHARS
+  {{ .Data.plaintext }}
+  {{- end -}}
+vault.hashicorp.com/agent-inject-template-pps-shared-secret: |
+  {{- with secret "transit/git/decrypt/team10-default-banking" "ciphertext=vault:v1:3hOjimqLiiNshoEAywlm3l/PM3lkKQTUwceci54mBR0=" "context=eW9sdC1naXQtc3RvcmFnZQo=" -}}
+  type: PASSWORD_ALFA_NUMERIC_SPECIAL_CHARS
+  {{ .Data.plaintext }}
+  {{- end -}}

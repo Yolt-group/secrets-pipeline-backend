@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Stubs example key",
+    "secretType": "KEY_128",
+    "description": "Example key for stubs",
+    "gitlabRepoNamespace": "backend",
+    "environments": [
+      "team5",
+      "yfb-acc"
+    ],
+    "namespaces": [
+      "ycs"
+    ],
+    "publicKeyOrCert": "test",
+    "jsonVersion": "v1",
+    "pgpTemplate": {
+      "identity": "security@yolt.io.test",
+      "strength": 2048,
+      "purpose" : 2,
+      "secondaryPurpose" : 3,
+      "pgpID": 0
+    },
+    "jwksTemplate": {
+      "kid": "123",
+      "alg": "PS512",
+      "use": "sig",
+      "kty": "RSA"
+    },
+    "csrTemplate": {
+      "subject": "CN=kvk.team5.yolt.io",
+      "strength": 4096,
+      "signatureAlgorithm": "SHA256withRSA",
+      "subjectAlternativeNames": [
+        "kvk.team5.yolt.io"
+      ],
+      "keyUsage": [
+        "digitalSignature",
+        "nonRepudiation"
+      ],
+      "extendedKeyUsage": [
+        "serverAuth",
+        "clientAuth"
+      ]
+    },
+    "validTilUnixEpoch": 1893456000,
+    "rotate": true,
+    "plaintextSecret": "test",
+    "skipPasswordLengthValidation": true,
+    "importedSecret": "vault:v1:dmF1bHRlbmNyeXB0ZWRzdHVmZmhlcmUK"
+  }
+]

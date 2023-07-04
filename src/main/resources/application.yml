@@ -1,0 +1,4 @@
+logging:
+  level:
+    com.yolt: DEBUG
+    root: WARN
